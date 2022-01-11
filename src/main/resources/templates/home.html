@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Covid-19 Tracker</title>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Covid-19 Tracker</h1>
+    <p>This app lists the current number of cases reported across the globe.</p>
+
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4" th:text="${totalReportedCases}">Total Reported Cases</h1>
+        <p class="lead">Total Cases reported as of today.</p>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>State</th>
+            <th>Country</th>
+            <th>Total Cases</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="locationData: ${allLocationData}">
+            <td th:text="${locationData.state}">Oranges</td>
+            <td th:text="${locationData.country}">0.99</td>
+            <td th:text="${locationData.latestTotalCases}">0.99</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
