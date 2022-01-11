@@ -14,7 +14,7 @@
     <name>corona-tracker</name>
     <description>corona-tracker</description>
     <properties>
-        <java.version>12</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
