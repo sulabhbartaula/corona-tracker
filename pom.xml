@@ -57,14 +57,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                         <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
                 </configuration>
             </plugin>
         </plugins>
